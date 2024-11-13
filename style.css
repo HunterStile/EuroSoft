@@ -1,3 +1,4 @@
+          /*INDEX*/
         * {
             margin: 0;
             padding: 0;
@@ -121,4 +122,109 @@
             right: 1rem;
             color: #003876;
             font-size: 0.9rem;
+        }
+
+        /*footer*/
+        .footer {
+            background-color: #003B7E;
+            color: white;
+            padding: 50px 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 30px;
+        }
+
+        .footer-logo {
+            max-width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .footer-quote {
+            font-style: italic;
+            margin: 15px 0;
+            max-width: 300px;
+        }
+
+        .footer-quote-author {
+            color: #ccc;
+            font-size: 0.9em;
+        }
+
+        .footer-contact {
+            margin-top: 20px;
+        }
+
+        .footer-contact a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            margin: 10px 0;
+        }
+
+        .footer-contact i {
+            margin-right: 10px;
+            color: #f44336;
+        }
+
+        .footer-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-bottom {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .social-links a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+        }
+
+        .contact-button {
+            background-color: white;
+            color: #003B7E;
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
         }

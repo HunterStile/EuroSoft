@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Pre-Live</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header></header>
+    <footer></footer>
+
+    <!-- Scripts di test -->
+    <script src="test-files.js"></script>
+    <script src="live-checklist.js"></script>
+    
+    <!-- I tuoi script normali -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('header').innerHTML += data;
+                console.log('✅ Navbar caricata');
+            })
+            .catch(err => console.error('❌ Errore navbar:', err));
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('footer').innerHTML = data;
+                console.log('✅ Footer caricato');
+            })
+            .catch(err => console.error('❌ Errore footer:', err));
+    </script>
+</body>
+</html>
