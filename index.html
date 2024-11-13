@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillSchool</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <div class="logo-icon">S</div>
+            SkillSchool
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="accreditation">
+            Accreditamento Regione Campania n. 03439/10/23
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-tag">LA SCUOLA DELLE COMPETENZE</div>
+            <h1 class="hero-title">Dall'unione tra cultura del lavoro, competenze e potenzialità supportiamo persone, professionisti e imprese</h1>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary">CHI SIAMO</a>
+                <a href="#" class="btn-secondary">CHIAMACI</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="/api/placeholder/600/800" alt="Student" />
+        </div>
+    </section>
+
+    <!-- Aggiungi l'elemento footer qui -->
+    <footer></footer>
+
+    <!-- Sposta gli script prima della chiusura del body -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('header').innerHTML += data;
+            })
+            .catch(error => {
+                console.error('Errore nel caricamento della navbar:', error);
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('footer').innerHTML = data;
+                console.log('Footer caricato con successo');
+            })
+            .catch(error => {
+                console.error('Errore nel caricamento del footer:', error);
+            });
+    </script>
+</body>
+</html>
