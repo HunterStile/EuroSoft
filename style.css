@@ -57,14 +57,14 @@
             background-color: #FFF3E6;
             min-height: 80vh;
             display: flex;
-            padding: 2rem 4rem;
+            padding: 8rem;
             position: relative;
             overflow: hidden;
         }
 
         .hero-content {
             max-width: 600px;
-            padding-top: 4rem;
+            padding-top: 3rem;
         }
 
         .hero-tag {
@@ -75,7 +75,7 @@
 
         .hero-title {
             color: #003876;
-            font-size: 2.8rem;
+            font-size: 3rem;
             line-height: 1.2;
             margin-bottom: 2rem;
         }
@@ -108,7 +108,7 @@
             right: 0;
             bottom: 0;
             width: 45%;
-            height: 90%;
+            height: 95%;
             background-color: #4A90E2;
             border-radius: 50% 0 0 50%;
             display: flex;
@@ -365,5 +365,146 @@
             .footer-container {
                 grid-template-columns: 1fr;
                 gap: 40px;
+            }
+        }
+
+        .objectives-section {
+            padding: 4rem 2rem;
+            background-color: #fff;
+        }
+
+        .objectives-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .image-stack {
+            flex: 1;
+            position: relative;
+            height: 500px;
+        }
+
+        .image-frame {
+            position: absolute;
+            background: white;
+            padding: 15px;
+            border-radius: 20px;
+            box-shadow: 0 4px 20px rgba(0, 56, 118, 0.1);
+            width: 80%;
+        }
+
+        .image-frame img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            object-fit: cover;
+        }
+
+        .image-frame:first-child {
+            top: 0;
+            left: 0;
+            transform: rotate(-5deg);
+            z-index: 2;
+        }
+
+        .image-frame:last-child {
+            bottom: 50px;
+            right: 0;
+            transform: rotate(5deg);
+            z-index: 1;
+        }
+
+        .objectives-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .objectives-tag {
+            color: #FF6B35;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .objectives-title {
+            color: #003876;
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            line-height: 1.2;
+        }
+
+        .objective-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 25px;
+        }
+
+        .objective-icon {
+            width: 48px;
+            height: 48px;
+            background: #f8f9ff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .objective-text {
+            flex: 1;
+        }
+
+        .objective-text h3 {
+            color: #003876;
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+            font-weight: 500;
+        }
+
+        .objective-text p {
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* Responsive styles to match existing media queries */
+        @media (max-width: 1024px) {
+            .objectives-container {
+                gap: 40px;
+            }
+
+            .objectives-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .objectives-container {
+                flex-direction: column;
+            }
+
+            .image-stack {
+                height: 400px;
+                width: 100%;
+                margin-bottom: 2rem;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .objectives-section {
+                padding: 2rem 1rem;
+            }
+
+            .image-stack {
+                height: 300px;
+            }
+
+            .objectives-title {
+                font-size: 2rem;
             }
         }
