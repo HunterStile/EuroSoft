@@ -7,7 +7,7 @@
           }
 
           .header {
-              background-color: #242423;
+              background-color: #FFFCF2;
               padding: 1.5rem 2rem;
               display: flex;
               justify-content: space-between;
@@ -15,7 +15,7 @@
           }
 
           .logo {
-            color: white;
+            color: #2F2F2F;
             font-size: 1.5rem;
             font-weight: bold;
             display: flex;
@@ -26,7 +26,7 @@
           }
 
           .logo-icon {
-              background-color: white;
+              background-color: #2F2F2F;
               border-radius: 50%;
               width: 32px;
               height: 32px;
@@ -40,13 +40,15 @@
                 gap: 2rem;
                 align-items: center;
                 position: absolute;
-                padding-left: 40rem;
+                padding-left: 42rem;
           }
 
           .nav a {
-              color: white;
+              color: #2F2F2F;
               text-decoration: none;
               font-size: 0.9rem;
+              font-weight: bold;
+              padding-left: 0.5rem;
           }
 
           .btn-prova{
@@ -63,38 +65,49 @@
 
           /* Hero section styles */
           .hero {
-              background-image: url('images/fotohome.jpg');
+              background-image: url('images/gradient 2.jpg');
               /* Sostituisci con il percorso della tua immagine */
               background-size: cover;
               /* Copre l'intera sezione */
               background-position: center;
               /* Centra l'immagine */
               color: #fff;
-              padding: 15rem;
-              text-align: center;
+              padding: 16rem;
           }
 
 
           .hero h1 {
-              font-size: 36px;
-              margin-bottom: 20px;
+            font-size: 50px;
+            padding-left: 2rem;
           }
 
+          .hero h2 {
+              font-size: 50px;
+              margin-bottom: 20px;
+              padding-left: 2rem;
+          }
+
+          .hero a{
+            font-size: 20px;
+            margin-bottom: 100px;
+            padding-left: 2rem;
+          }
           .hero p {
-              font-size: 18px;
-              margin-bottom: 40px;
+            font-size: 20px;
+            margin-bottom: 40px;
+            padding-left: 2rem;
           }
 
           .buttons {
               display: flex;
-              justify-content: center;
+              padding-left: 1rem;
           }
 
           .buttons button {
               background-color: #FFA11E;
               color: #fff;
               border: none;
-              padding: 12px 24px;
+              padding: 14px 24px;
               border-radius: 50px;
               font-size: 16px;
               margin: 0 10px;
@@ -109,18 +122,23 @@
           }
 
           .work-process h2 {
-              font-size: 28px;
-              margin-bottom: 40px;
+              font-size: 40px;
+              padding-top: 3rem;
+              color: #FFAB35;
           }
 
           .process-steps {
               display: flex;
               justify-content: center;
+              padding-bottom: 15rem;
+              padding-top: 7rem;
           }
 
           .process-step {
               width: 200px;
               margin: 0 20px;
+              border-radius: 8px;
+              box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
           }
 
           .process-step img {
@@ -136,7 +154,9 @@
 
           .process-step p {
               font-size: 14px;
-              color: #666;
+              color: #2F2F2F;
+              text-align: left;
+              padding: 1rem;
           }
 
           .hero-image {
