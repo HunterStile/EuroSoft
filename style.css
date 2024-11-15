@@ -139,7 +139,7 @@
           }
 
           .process-step {
-              width: 200px;
+              width: 220px;
               margin: 0 20px;
               border-radius: 8px;
               box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -602,44 +602,62 @@
           }
 
           .image-frame img {
-              width: 100%;
-              height: auto;
-              border-radius: 15px;
-              object-fit: cover;
-          }
+            width: 100%;
+            height: 100%;
+            border-radius: 20%;
+            object-fit: cover;
+        }
 
           .image-frame:first-child {
-              top: 0;
-              left: 0;
-              transform: rotate(-5deg);
-              z-index: 2;
-          }
+            top: 69px;
+            left: 0px;
+            transform: rotate(0deg);
+            z-index: 2;
+            border-radius: 20%;
+            width: 55%;
+            margin-left: 75px;
+            padding: 5px;
+        }
+        .image-frame:first-child img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20%;
+            object-fit: cover;
+        }
 
           .image-frame:last-child {
-              bottom: 50px;
-              right: 0;
-              transform: rotate(5deg);
-              z-index: 1;
+            bottom: 50px;
+            left: 140px;
+            top: 163px;
+            margin-left: 110px;
+            transform: rotate(0deg);
+            z-index: 1;
+            border-radius: 50% 50% 50% 50%;
+            position: relative;
+            width: 55%;
+            height: auto;
+            padding: 5px;
           }
+
+
 
           .objectives-content {
               flex: 1;
-              padding: 20px;
           }
 
           .objectives-tag {
-              color: #FFAB35;
-              font-size: 0.9rem;
-              text-transform: uppercase;
-              margin-bottom: 1rem;
+            color: #FFAB35;
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
           }
 
           .objectives-title {
-              color: #2F2F2F;
-              font-size: 2.5rem;
-              font-weight: bold;
-              margin-bottom: 2rem;
-              line-height: 1.2;
+            color: #2F2F2F;
+            font-size: 2.6rem;
+            font-weight: bold;
+            margin-bottom: 2rem;
+            line-height: 1.2;
           }
 
           .objective-item {
@@ -665,10 +683,10 @@
           }
 
           .objective-text h3 {
-              color: #2F2F2F;
-              margin-bottom: 5px;
-              font-size: 1.1rem;
-              font-weight: 500;
+            color: #2F2F2F;
+            margin-bottom: 5px;
+            font-size: 1.2rem;
+            font-weight: 500;
           }
 
           .objective-text p {
