@@ -56,11 +56,12 @@
           }
 
           .btn-contact {
-              background-color: #FFA11E;
+              background-color: #FFAB35;
               color: white;
-              padding: 0.5rem 1.5rem;
+              padding: 0.7rem 1.5rem;
               border-radius: 50px;
               text-decoration: none;
+              font-weight: bold;
           }
 
           /* Hero section styles */
@@ -104,12 +105,13 @@
           }
 
           .buttons button {
-              background-color: #FFA11E;
+              background-color: #FFAB35;
               color: #fff;
               border: none;
               padding: 14px 24px;
               border-radius: 50px;
               font-size: 16px;
+              font-weight: bold;
               margin: 0 10px;
               cursor: pointer;
           }
@@ -123,15 +125,17 @@
 
           .work-process h2 {
               font-size: 40px;
-              padding-top: 3rem;
+              padding-top: 8px;
               color: #FFAB35;
+              padding-right: 50px;
           }
 
           .process-steps {
               display: flex;
               justify-content: center;
-              padding-bottom: 15rem;
-              padding-top: 7rem;
+              padding-bottom: 60px;
+              padding-top: 4rem;
+              padding-right: 50px;
           }
 
           .process-step {
@@ -143,8 +147,7 @@
 
           .process-step img {
               width: 80px;
-              height: 80px;
-              margin-bottom: 20px;
+              margin-top: 25px;
           }
 
           .process-step h3 {
@@ -153,10 +156,11 @@
           }
 
           .process-step p {
-              font-size: 14px;
-              color: #2F2F2F;
-              text-align: left;
-              padding: 1rem;
+            font-size: 16px;
+            color: #0A0908;
+            text-align: left;
+            padding: 1rem;
+            font-weight: 500;
           }
 
           .hero-image {
@@ -234,17 +238,18 @@
           .objectives-content {
               flex: 1;
               padding: 20px;
+              padding-bottom: 90px;
           }
 
           .objectives-tag {
-              color: #FF6B35;
+              color: #FFAB35;
               font-size: 0.9rem;
               text-transform: uppercase;
               margin-bottom: 1rem;
           }
 
           .objectives-title {
-              color: #003876;
+              color: #2F2F2F;
               font-size: 2.5rem;
               font-weight: bold;
               margin-bottom: 2rem;
@@ -274,7 +279,7 @@
           }
 
           .objective-text h3 {
-              color: #003876;
+              color: #2F2F2F;
               margin-bottom: 5px;
               font-size: 1.1rem;
               font-weight: 500;
@@ -498,7 +503,7 @@
           }
 
           .discover-btn {
-              background-color: #FF6B35;
+              background-color: #FFAB35;
               color: white;
               padding: 0.8rem 2rem;
               border-radius: 50px;
@@ -623,14 +628,14 @@
           }
 
           .objectives-tag {
-              color: #FF6B35;
+              color: #FFAB35;
               font-size: 0.9rem;
               text-transform: uppercase;
               margin-bottom: 1rem;
           }
 
           .objectives-title {
-              color: #003876;
+              color: #2F2F2F;
               font-size: 2.5rem;
               font-weight: bold;
               margin-bottom: 2rem;
@@ -660,7 +665,7 @@
           }
 
           .objective-text h3 {
-              color: #003876;
+              color: #2F2F2F;
               margin-bottom: 5px;
               font-size: 1.1rem;
               font-weight: 500;
