@@ -123,11 +123,17 @@
               text-align: center;
           }
 
+          .introduction-objective {
+            color: #FFAB35;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+         }
+
           .work-process h2 {
               font-size: 40px;
               padding-top: 8px;
-              color: #FFAB35;
-              padding-right: 50px;
+              color: #2F2F2F;
+              
           }
 
           .process-steps {
@@ -135,7 +141,7 @@
               justify-content: center;
               padding-bottom: 60px;
               padding-top: 4rem;
-              padding-right: 50px;
+             
           }
 
           .process-step {
@@ -330,7 +336,7 @@
 
           /*footer*/
           .footer {
-              background-color: #003B7E;
+              background-color: #FF922B;
               color: white;
               padding: 50px 0;
               font-family: Arial, sans-serif;
@@ -418,8 +424,8 @@
           }
 
           .contact-button {
-              background-color: white;
-              color: #003B7E;
+              background-color: #FFFCF2;
+              color: #FF922B;
               padding: 8px 20px;
               border-radius: 20px;
               text-decoration: none;
@@ -759,12 +765,12 @@
           .view-all-btn {
             display: inline-block;
             padding: 12px 24px;
-            background-color: #ff4d4d;
+            background-color: #FFAB35;
             color: #fff;
             font-size: 16px;
             font-weight: 600;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 50px;
             transition: background-color 0.3s ease;
           }
           
@@ -779,11 +785,15 @@
           }
           
           .project-card {
+            background-image: url('images/corso\ 2\ gradient\ 2.jpg');
+            background-size: cover;
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             overflow: hidden;
-          }
+            height: 300px;
+            align-content: end;         
+         }
           
           .project-card img {
             width: 100%;
@@ -795,5 +805,25 @@
             padding: 20px;
             font-size: 18px;
             font-weight: 600;
-            color: #2b3445;
+            color: #FFFCF2;
           }
+          .project-card-rect {
+            background-image: url('images/corso 1 gradient 2.jpg');
+            background-size: cover;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            height: 200px;
+            align-content: end;
+        }
+        .project-card:nth-child(4) {
+            margin-top: -100px; /* Sposta su per allineare con la fine della card 1 */
+          }
+          
+          .project-card:nth-child(6) {
+            margin-top: -100px; /* Sposta su per allineare con la fine della card 3 */
+          }
+
+
+
