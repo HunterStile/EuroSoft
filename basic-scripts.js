@@ -29,3 +29,22 @@ document.addEventListener('DOMContentLoaded', function() {
     loadNavbar();
     loadFooter();
 });
+
+// Add this JavaScript to handle the mobile menu
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuButton = document.querySelector('.mobile-menu-button');
+    const nav = document.querySelector('.nav');
+
+    mobileMenuButton.addEventListener('click', function() {
+        mobileMenuButton.classList.toggle('active');
+        nav.classList.toggle('active');
+    });
+
+    // Close menu when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!nav.contains(event.target) && !mobileMenuButton.contains(event.target)) {
+            nav.classList.remove('active');
+            mobileMenuButton.classList.remove('active');
+        }
+    });
+});
