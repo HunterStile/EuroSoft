@@ -39,17 +39,30 @@
             display: flex;
             align-items: center;
             gap: 0.5rem;
+            position: absolute;
+            padding-left: 16rem;
         }
 
         /* Icona del logo */
         .logo-icon {
+            display: none;
             background-color: #2F2F2F;
             border-radius: 50%;
-            width: 32px;
-            height: 32px;
+            width: 50px;
+            height: 50px;
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+            /* Assicura che l'immagine non esca dal cerchio */
+        }
+
+        /* Immagine del logo */
+        .logo-img {
+            max-height: 50px;
+            width: auto;
+            object-fit: contain;
+         
         }
 
         /* Navigation styles */
@@ -322,7 +335,7 @@
         .footer {
             background-color: #FF922B;
             color: white;
-            padding: 50px 0;
+            padding: 65px 0;
             font-family: Arial, sans-serif;
         }
 
@@ -637,7 +650,7 @@
             background-color: #f9f9f9;
         }
 
-        .container {
+        .container-activities {
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
@@ -758,7 +771,98 @@
             transform: rotate(-45deg) translate(6px, -6px);
         }
 
-
+        /* Contatti */
+        .container-contact {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 85px;
+            display: flex;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+            margin-top: 1.5rem;
+        }
+        
+        .form-container {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .contact-title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        
+        .contact-text {
+            color: #666;
+            margin-bottom: 30px;
+        }
+        
+        .social-media {
+            margin: 20px 0;
+        }
+        
+        .social-media a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+            background: #1e2959;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            text-decoration: none;
+        }
+        
+        .form-input {
+            width: 100%;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: #f8f9fa;
+        }
+        
+        .form-textarea {
+            width: 100%;
+            height: 120px;
+            padding: 12px;
+            margin: 8px 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background: #f8f9fa;
+            resize: vertical;
+        }
+        
+        .submit-button {
+            background: #ff4c60;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .map-container {
+            margin-top: 20px;
+            width: 100%;
+            height: 300px;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
 
         /* Manteniamo tutti gli stili desktop originali e modifichiamo solo le media queries */
 
@@ -770,6 +874,8 @@
             }
 
             .logo {
+                position: static;
+                padding-left: 0;
                 font-size: 1.2rem;
             }
 
@@ -803,7 +909,7 @@
             }
 
             .btn-prova {
-                margin-top: 1rem;
+                display: none;
             }
 
             .btn-contact {
@@ -818,7 +924,7 @@
 
             /* Hero section mobile */
             .hero {
-                padding: 4rem 1.5rem;
+                padding: 6rem 1.5rem;
                 text-align: center;
             }
 
@@ -958,3 +1064,137 @@
                 width: calc(50% - 2rem);
             }
         }
+
+        /* Footer mobile styles */
+        @media (max-width: 768px) {
+            .footer {
+                padding: 30px 0;
+                /* Riduci il padding per risparmiare spazio */
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+                /* Rendi la griglia una colonna unica */
+                gap: 20px;
+                /* Riduci lo spazio tra le sezioni */
+                padding: 0 15px;
+                /* Riduci il padding laterale */
+            }
+
+            .footer-logo {
+                max-width: 150px;
+                /* Riduci la dimensione del logo per mobile */
+                margin-bottom: 15px;
+            }
+
+            .footer-quote {
+                max-width: 100%;
+                /* Rendi la citazione adattabile alla larghezza */
+                margin: 10px 0;
+                font-size: 1rem;
+                /* Aumenta leggermente la dimensione del testo per legibilità */
+            }
+
+            .footer-contact a {
+                margin: 8px 0;
+                /* Riduci il margine tra i link di contatto */
+            }
+
+            .footer-contact i {
+                font-size: 1.2rem;
+                /* Aumenta la dimensione delle icone per facilitarne la visibilità */
+            }
+
+            .footer-section {
+                font-size: 1rem;
+                /* Riduci la dimensione del titolo delle sezioni */
+                margin-bottom: 15px;
+                justify-content: center;
+                /* Riduci lo spazio sotto i titoli */
+            }
+
+            .footer-links li {
+                margin-bottom: 8px;
+                /* Riduci il margine tra i link */
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                /* Posiziona gli elementi uno sotto l'altro */
+                align-items: flex-start;
+                /* Allinea gli elementi a sinistra */
+                margin-top: 20px;
+                padding-top: 10px;
+            }
+
+            .footer-bottom .social-links {
+                margin-bottom: 10px;
+                /* Aggiungi un piccolo margine tra i social */
+            }
+
+            .footer-bottom .contact-button {
+                margin-top: 10px;
+                /* Distanza tra il bottone di contatto e i social */
+            }
+        }
+
+         /* Contact form per mobile */
+         @media (max-width: 768px) {
+            .container-contact {
+                flex-direction: column;
+                padding: 15px;
+                gap: 20px;
+            }
+
+            .contact-info,
+            .form-container {
+                width: 100%;
+            }
+
+            .contact-title {
+                font-size: 2em;
+                margin-bottom: 15px;
+            }
+
+            .social-media {
+                justify-content: center;
+                margin: 15px 0;
+            }
+
+            .map-container {
+                height: 250px;
+                margin-top: 15px;
+            }
+
+            .form-container {
+                padding: 15px;
+            }
+
+            .submit-button {
+                width: 100%;
+                padding: 12px;
+            }
+        }
+
+        /* Contact form per dispositivi molto piccoli */
+        @media (max-width: 480px) {
+            .contact-title {
+                font-size: 1.8em;
+            }
+
+            .form-input,
+            .form-textarea {
+                padding: 10px;
+            }
+
+            .map-container {
+                height: 200px;
+            }
+
+            .social-media a {
+                width: 35px;
+                height: 35px;
+            }
+        }
+
+        
