@@ -225,6 +225,23 @@ body {
     /* Adatta l'immagine alla sezione */
 }
 
+.button-link {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+    padding-right: 30px;
+}
+
+/* Questo assicura che il link mantenga lo stesso colore anche dopo essere stato visitato */
+.button-link:visited {
+    color: inherit;
+}
+
+/* Opzionale: se vuoi rimuovere anche l'effetto hover */
+.button-link:hover {
+    color: inherit;
+}
+
 /* Sezione degli obbiettivi */
 .objectives-section {
     padding: 4rem 2rem;
