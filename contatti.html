@@ -2,62 +2,123 @@
 <html lang="it">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EuroSoft</title>
-  <link rel="stylesheet" href="style.css?v=abcdef12345">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EuroSoft</title>
+    <link rel="stylesheet" href="style.css?v=abcdef12345">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
     <header></header>
 
-        <div class="container-contact">
-            <div class="contact-info">
-                <div class="contact-us">CONTACT US</div>
-                <h1 class="contact-title">Get In Touch For More Information</h1>
-                <p class="contact-text">
-                    Repellat ullamcorper, illum commodo numquam aliquid voluptatem pellentesque repellendus rhoncus
-                    repellat lectus tristique sollicitudini! Urna torquent hac sed, aliquip porta.
-                </p>
+    <div class="container-contact">
+        <div class="contact-info">
+            <div class="contact-us">CONTACT US</div>
+            <h1 class="contact-title">Get In Touch For More Information</h1>
+            <p class="contact-text">
+                Repellat ullamcorper, illum commodo numquam aliquid voluptatem pellentesque repellendus rhoncus
+                repellat lectus tristique sollicitudini! Urna torquent hac sed, aliquip porta.
+            </p>
 
-                <div class="social-media">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" aria-label="Google"><i class="fab fa-google"></i></a>
-                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                    <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
-                </div>
-
-                <div class="map-container">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.457872247074!2d14.120437376438273!3d40.861824928429215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b0fcbda440295%3A0x303b6fa80ac59508!2sEurosoft%20Servizi%20Formativi%20Integrati!5e0!3m2!1sit!2sit!4v1731800140028!5m2!1sit!2sit" 
-                  width="600" 
-                  height="450" 
-                  style="border:0;" 
-                  allowfullscreen="" 
-                  loading="lazy" 
-                  referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
+            <div class="social-media">
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" aria-label="Google"><i class="fab fa-google"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
             </div>
 
-            <div class="form-container">
-                <form action="#" method="POST">
-                    <input type="text" class="form-input" placeholder="Enter Your Full Name.." required>
-                    <input type="email" class="form-input" placeholder="Enter Your Email Address.." required>
-                    <input type="text" class="form-input" placeholder="Enter Your Subject">
-                    <textarea class="form-textarea" placeholder="Enter your Message.."></textarea>
-                    <button type="submit" class="submit-button">Submit</button>
-                </form>
+            <div class="map-container">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.457872247074!2d14.120437376438273!3d40.861824928429215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b0fcbda440295%3A0x303b6fa80ac59508!2sEurosoft%20Servizi%20Formativi%20Integrati!5e0!3m2!1sit!2sit!4v1731800140028!5m2!1sit!2sit"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
 
-        <!-- Font Awesome for social icons -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        <div class="form-container">
+            <form id="contact-form" onsubmit="return sendMail(event)">
+                <!-- Aggiungiamo gli alert per il feedback -->
+                <div id="success-alert" class="alert alert-success">
+                    Messaggio inviato con successo!
+                </div>
+                <div id="error-alert" class="alert alert-error">
+                    Si è verificato un errore. Riprova più tardi.
+                </div>
 
-        <footer></footer>
+                <input type="text" class="form-input" name="from_name" placeholder="Enter Your Full Name.." required>
+                <input type="email" class="form-input" name="from_email" placeholder="Enter Your Email Address.."
+                    required>
+                <input type="text" class="form-input" name="subject" placeholder="Enter Your Subject">
+                <textarea class="form-textarea" name="message" placeholder="Enter your Message.."></textarea>
 
-        <script src="basic-scripts.js?v=abcdef12345"></script>
+                <button type="submit" class="submit-button">
+                    Submit
+                    <span id="loading" class="loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                    </span>
+                </button>
+            </form>
+        </div>
+    </div>
 
-    </body>
+    <!-- Font Awesome for social icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="basic-scripts.js?v=abcdef12345"></script>
+    <script>
+        // Inizializza EmailJS con la tua public key
+
+        
+        (function () {
+            YOUR_PUBLIC_KEY = 'UsUS7TEMrX9YZPJ2o'
+            emailjs.init(YOUR_PUBLIC_KEY); // Sostituisci con la tua public key
+        })();
+
+        function sendMail(e) {
+            
+            YOUR_SERVICE_ID = 'service_nqdishx'
+            YOUR_TEMPLATE_ID = 'template_t35zeco'
+            e.preventDefault();
+
+            // Reset alerts
+            document.getElementById('success-alert').style.display = 'none';
+            document.getElementById('error-alert').style.display = 'none';
+
+            // Show loading
+            document.getElementById('loading').style.display = 'inline-block';
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+
+            // Get form data
+            const form = e.target;
+
+            // Send email using EmailJS
+            emailjs.sendForm(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, form)
+                .then(function (response) {
+                    console.log('SUCCESS!', response.status, response.text);
+                    document.getElementById('success-alert').style.display = 'block';
+                    form.reset(); // Reset form
+                })
+                .catch(function (error) {
+                    console.log('FAILED...', error);
+                    document.getElementById('error-alert').style.display = 'block';
+                })
+                .finally(function () {
+                    // Hide loading and enable button
+                    document.getElementById('loading').style.display = 'none';
+                    submitBtn.disabled = false;
+                });
+
+            return false;
+        }
+    </script>
+
+</body>
 
 </html>
