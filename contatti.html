@@ -30,6 +30,9 @@
             </div>
 
             <div class="map-container">
+                <div id="map-spinner" class="map-loading">
+                    <i class="fas fa-spinner fa-spin"></i>
+                </div>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3017.457872247074!2d14.120437376438273!3d40.861824928429215!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x133b0fcbda440295%3A0x303b6fa80ac59508!2sEurosoft%20Servizi%20Formativi%20Integrati!5e0!3m2!1sit!2sit!4v1731800140028!5m2!1sit!2sit"
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
@@ -70,54 +73,9 @@
     <footer></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="basic-scripts.js?v=abcdef12345"></script>
-    <script>
-        // Inizializza EmailJS con la tua public key
-
-        
-        (function () {
-            YOUR_PUBLIC_KEY = 'UsUS7TEMrX9YZPJ2o'
-            emailjs.init(YOUR_PUBLIC_KEY); // Sostituisci con la tua public key
-        })();
-
-        function sendMail(e) {
-            
-            YOUR_SERVICE_ID = 'service_nqdishx'
-            YOUR_TEMPLATE_ID = 'template_t35zeco'
-            e.preventDefault();
-
-            // Reset alerts
-            document.getElementById('success-alert').style.display = 'none';
-            document.getElementById('error-alert').style.display = 'none';
-
-            // Show loading
-            document.getElementById('loading').style.display = 'inline-block';
-            const submitBtn = e.target.querySelector('button[type="submit"]');
-            submitBtn.disabled = true;
-
-            // Get form data
-            const form = e.target;
-
-            // Send email using EmailJS
-            emailjs.sendForm(YOUR_SERVICE_ID, YOUR_TEMPLATE_ID, form)
-                .then(function (response) {
-                    console.log('SUCCESS!', response.status, response.text);
-                    document.getElementById('success-alert').style.display = 'block';
-                    form.reset(); // Reset form
-                })
-                .catch(function (error) {
-                    console.log('FAILED...', error);
-                    document.getElementById('error-alert').style.display = 'block';
-                })
-                .finally(function () {
-                    // Hide loading and enable button
-                    document.getElementById('loading').style.display = 'none';
-                    submitBtn.disabled = false;
-                });
-
-            return false;
-        }
-    </script>
+    <script src="/JS/basic-scripts.js?v=abcdef12345"></script>
+    <script src="/JS/email-js.js?v=abcdef12345"></script>
+    
 
 </body>
 
